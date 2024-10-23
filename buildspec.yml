@@ -11,6 +11,8 @@ phases:
     commands:
       - echo log in to Amazon ECR...
       - aws --version
+      - echo "Checking if Docker is installed..."
+      - docker --version
       - echo $AWS_DEFAULT_REGION
       - $(aws ecr get-login --no-include-email --region us-east-1)
       - REPOSITORY_URI=891377252817.dkr.ecr.us-east-1.amazonaws.com/aws-ecs-docker
